@@ -36,5 +36,38 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    int tabuleiro[10][10]; // criação da matriz de uma escala 10x10.
+
+    printf(" //// TABELA BATALHA NAVAL //// \n\n"); // apenas o título do tema.
+
+    for(int i = 0; i < 10; i++){ // inicialização do tabuleiro com apenas 0s.
+        for(int j = 0; j < 10; j++){
+            tabuleiro[i][j] = 0; // aqui pode-se ver que o valor foi definido em zero na matriz.
+        }
+    }
+
+    int linhah = 2;
+    int colunah = 2;
+    for(int i = 0; i < 3; i++){ //definição do navio horizontal no tabuleiro, que está sendo representado pelo número 3.
+        tabuleiro[linhah][colunah + i] = 3;
+    }
+
+    int linhav = 6;
+    int colunav = 7;
+    for(int i = 0; i < 3; i++){ //difinição do navio vertical no tabuleiro, que também está sendo representado pelo número 3.
+        tabuleiro[linhav + i][colunav] = 3;
+    }
+
+    printf("    A  B  C  D  E  F  G  H  I  J   \n"); // apenas uma marcação para as colunas no tabuleiro.
+
+    for(int i = 0; i < 10; i++){ // inicialização do tabuleiro com todas as informações passadas.
+        printf("%2d| ", i + 1); // marcação das linhas no tabuleiro, so que usando números de 1 a 10.
+
+        for(int j = 0; j < 10; j++){ //este loop, imprime cada linha do tabuleiro
+            printf("%d  ", tabuleiro[i][j]);
+        }
+        printf("\n"); // um printf para que as linhas fiquem organizadas no terminal.
+    }
+
     return 0;
 }
