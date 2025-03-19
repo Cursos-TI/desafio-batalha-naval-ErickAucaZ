@@ -58,6 +58,18 @@ int main() {
         tabuleiro[linhav + i][colunav] = 3;
     }
 
+    int linha_d = 6; // código da primeira diagonal.
+    int coluna_d = 4;
+    for(int i = 0; i < 3; i++){
+        tabuleiro[linha_d + i][coluna_d - i] = 3; //ambas variáveis vão receber um incremento ou decremento, para ser impresso na diagonal no terminal.
+    }
+
+    int linha_d2 = 0; // código da segunda diagonal.
+    int coluna_d2 = 5;
+    for(int i = 0; i < 3; i++){
+        tabuleiro[linha_d2 + i][coluna_d2 + i] = 3; // mesma coisa das variáveis anterios, ou incrementa ou decrementa em ambas.
+    }
+
     printf("    A  B  C  D  E  F  G  H  I  J   \n"); // apenas uma marcação para as colunas no tabuleiro.
 
     for(int i = 0; i < 10; i++){ // inicialização do tabuleiro com todas as informações passadas.
